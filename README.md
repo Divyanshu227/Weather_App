@@ -63,7 +63,7 @@ Add to .gitignore:
 config.js
 
 Run using Live Server.
-
+```
 📁 Project Structure
 Weather-App/
 │
@@ -73,19 +73,18 @@ Weather-App/
 ├── config.js   (ignored)
 └── README.md
 
-<details> <summary><strong>🧠 What I Learned (click to expand)</strong></summary>
 
-Consuming REST APIs in frontend applications
+<summary><strong>🧠 What I Learned</strong></summary>
 
-Writing clean asynchronous code using async/await
+<ul>
+  <li>Consuming REST APIs in frontend applications</li>
+  <li>Writing clean asynchronous code using async/await</li>
+  <li>Handling API errors and edge cases</li>
+  <li>Applying UI transitions & animations without overdesign</li>
+  <li>Securing API keys in public repositories</li>
+</ul>
 
-Handling API errors and edge cases
 
-Applying UI transitions & animations without overdesign
-
-Securing API keys in public repositories
-
-</details>
 🚀 Future Improvements
 
 🌤️ Dynamic weather icons
