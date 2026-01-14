@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <img src=\"https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5\">\r   <img src=\"https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3\">\r   <img src=\"https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript\">\r   <img src=\"https://img.shields.io/badge/API-OpenWeatherMap-green?style=for-the-badge\">\r </p>",
+  "main": "config.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Divyanshu227/Weather_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Divyanshu227/Weather_App/issues"
+  },
+  "homepage": "https://github.com/Divyanshu227/Weather_App#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7"
+  }
+}
