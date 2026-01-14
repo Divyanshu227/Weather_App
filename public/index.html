@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="background">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="rain-container" id="rainContainer"></div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+        <h1>Weather App</h1>
+        <div class="search-container">
+        <h3>Enter City Name</h3>
+        <input type="text" id="cityname" placeholder="Ex. - London">
+        <button onclick="getWeather()">Search</button>
+        </div>
+        <p class="subtitle">Get real-time weather information for any city</p>
+        </div>
+        <div id="weather">
+            <img id="icon" alt="weather icon">
+            <p id="city"></p>
+            <p id="temp"></p>
+            <p id="condition"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+        </div>
+        <p id="error"></p>
+    </div>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>
