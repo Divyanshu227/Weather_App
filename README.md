@@ -1,100 +1,101 @@
-# 🌦️ Weather App — Vanilla JavaScript
+# 🌦️ Weather App
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5">
   <img src="https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3">
   <img src="https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript">
   <img src="https://img.shields.io/badge/API-OpenWeatherMap-green?style=for-the-badge">
+  <br>
+  <img src="https://img.shields.io/badge/NODEJS-purple?style=for-the-badge&logo=nodejs">
+  <img src="https://img.shields.io/badge/EXPRESSJS-orange?style=for-the-badge&logo=expressjs">
 </p>
 
-> A clean and responsive **Weather Application** built using **HTML, CSS, and Vanilla JavaScript**, featuring **smooth UI transitions, subtle animations**, and real-time weather data from the **OpenWeatherMap API**.
+
+A lightweight weather web app: responsive frontend (HTML/CSS/JS) with a minimal Express backend that proxies requests to the OpenWeatherMap API.
 
 ---
 
-## ✨ Features
+## Highlights
 
-- 🔍 Search weather by city name  
-- 🌡️ Temperature, weather condition, humidity, wind speed  
-- ⚠️ Graceful error handling for invalid input & API errors  
-- 🎨 Smooth **hover transitions & UI animations**
-- 🌥️ Subtle animated background (CSS-based)
-- 🚫 No frameworks, no libraries
+- Search weather by city name
+- Shows temperature (°C), conditions, humidity and wind
+- Framework-free frontend and a small server to keep the API key off the client
+- Smooth UI transitions and subtle animations
 
 ---
 
-## 🎞️ UI Animations & Transitions (Preview)
+## How it works
 
-- Button hover transitions  
-- Card elevation & shadow transitions  
-- Smooth content updates  
-- Non-distracting motion for clean UX  
+- Frontend (in `public/`) calls `/weather?city=City+Name` on the local server.
+- The server reads `WEATHER_API_KEY` from `.env` and forwards the request to OpenWeatherMap, returning the JSON response to the client.
 
 ---
 
-## 🛠️ Tech Stack
+## Quickstart
 
-| Technology | Usage |
-|----------|------|
-| HTML5 | Structure |
-| CSS3 | Styling, transitions, animations |
-| JavaScript (ES6+) | Logic, async/await |
-| REST API | OpenWeatherMap |
+Prerequisites: Node.js 16+ and an OpenWeatherMap API key.
 
----
-
-## 🔌 API Used
-
-- **OpenWeatherMap API**  
-  Real-time weather data for cities worldwide.
-
----
-
-## ⚙️ Setup Instructions
+1. Clone and install
 
 ```bash
-git clone https://github.com/Divyanshu227/Weather_App.git
-
-Create config.js:
-
-const API_KEY = "YOUR_OPENWEATHERMAP_API_KEY";
-
-Add to .gitignore:
-
-config.js
-
-Run using Live Server.
+git clone <repo-url>
+cd Weather_App
+npm install
 ```
-📁 Project Structure
-Weather-App/
-│
-├── index.html
-├── style.css
-├── script.js
-├── config.js   (ignored)
-└── README.md
 
+2. Create a `.env` file in the project root with your API key:
 
-<summary><strong>🧠 What I Learned</strong></summary>
+```
+WEATHER_API_KEY=your_openweathermap_api_key
+```
 
-<ul>
-  <li>Consuming REST APIs in frontend applications</li>
-  <li>Writing clean asynchronous code using async/await</li>
-  <li>Handling API errors and edge cases</li>
-  <li>Applying UI transitions & animations without overdesign</li>
-  <li>Securing API keys in public repositories</li>
-</ul>
+3. Add `.env` to `.gitignore` (do not commit your key).
 
+4. Start the server
 
-🚀 Future Improvements
+```bash
+npm start
+# then open http://localhost:3000
+```
 
-🌤️ Dynamic weather icons
+Notes:
+- `npm start` runs `node server.js` (the project uses ES module mode via `type: "module"`).
+- If you prefer testing only the frontend, you can use a static server / Live Server, but local server is recommended so the API key remains hidden.
 
-🌗 Dark / night mode
+---
 
-📍 Geolocation-based weather
+## Project structure
 
-🔁 °C / °F toggle
+- `server.js` — Express server and `/weather` endpoint
+- `public/` — `index.html`, `script.js`, `style.css`
+- `.env` — local environment variables (not committed)
+- `package.json` — scripts & dependencies
 
-⏳ Skeleton loaders & micro-animations
+---
 
-⭐ If you like this project, consider starring the repository!
+## Troubleshooting
+
+- `City required` from `/weather`: ensure the client sends the `city` query param.
+- API errors: verify `WEATHER_API_KEY`, check for rate limits, and confirm network connectivity.
+- If server fails to start, run `node --version` and ensure Node 16+ is installed.
+
+---
+
+## What I learned
+
+- Consuming REST APIs from the frontend
+- Writing clean async code using `async/await`
+- Handling API errors and edge cases
+- Applying UI transitions and micro-interactions without overdesign
+
+---
+
+## Future improvements
+
+- Dynamic weather icons
+- Dark / night mode
+- Geolocation-based default weather
+- °C / °F toggle
+- Skeleton loaders and accessibility improvements
+
+---
